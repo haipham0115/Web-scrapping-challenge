@@ -14,15 +14,43 @@
   <div class="container">
 
     <div class="jumbotron text-center">
-      <h1>Mission to Mars'</h1>
+      <h1>Mission to Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
 
-    <!-- Phone Listings -->
-    <div class="row" id="phone-listings">
+    <!-- row 2 -->
+    <div class="row">
       <div class="col-md-12">
-        <h4 class="heading">{{mars_info.news_title}} {{mars_info.feature_img_url}}</h4>
-        <small>{{mars_info.mars_earth_df}}</small>
+        <h3 class="heading">{{mars_info.news_title}} {{mars_info.feature_img_url}}</h3>
+        <p>{{mars_info.teaser_para}}</p>
+      </div>
+    </div>
+
+    <!-- row 2 -->
+    <div class="row">
+       <div class="col-md-6">
+          <h3 class="heading">Featured Mars Image</h3>
+          <img src="mars_info.feature_img_url">
+       </div>
+       <div>
+         <div class="col-md-6">
+           <h3 class="heading">Mars Facts</h3>
+           <table>
+             <tr></tr>
+           </table>
+         </div>
+       </div>
+    </div>
+
+    <!-- row 3 -->
+    <div>
+      <div class="row">
+        <div class="col-md-3">
+          <!-- <img src="mars_info.hemisphere"> -->
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
+        <div class="col-md-3"></div>
       </div>
     </div>
 

@@ -55,6 +55,9 @@ def scrape():
 	mars_facts_df.columns = ["Entities", "Info"]
 	# Mars and Earth comparision facts
 	mars_earth_df = tables[0]
+	# need to convert the table into JSON. MongoDB doesn't like non-BSON object
+	mars_earth_json_df = mars_earth_df.to_json(orient="records")
+
 
 #		4)------------ SCRAPE FOR MARS' HEMISPHERES:
 	hami_url = 'https://marshemispheres.com/'
@@ -114,7 +117,7 @@ def scrape():
 	mars_scrape_dictionary = {'Latest News': news_title, 
     'News Paragraph': teaser_para, 
     'Featured Image': feature_image_url,
-    'Facts': mars_earth_df,
+    'Facts': mars_earth_json_df,
     'Hemisphere URLs': hemisphere_image_urls}
 
 #-------------- RETURN SOMETHING
